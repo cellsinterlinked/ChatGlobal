@@ -1,11 +1,12 @@
-const CalendarDay = (
-  item: object[{ name: string; num: number; status: any }]
-) => {
-  return (
-    <div className={item.num !== 0 ? "bg-[grey]" : "bg-[white]"}>
-      {item.num}
-    </div>
-  );
+import React from 'react';
+import { Day } from './Calendar';
+
+interface CalendarDayProps {
+    day: Day;
+}
+
+const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
+    return <div>{day.num}</div>;
 };
 
 export default CalendarDay;
